@@ -1077,7 +1077,7 @@ def get_signals(signal_array, frame, root_or_cache, ns, multiplex_id, float_fact
             base_type = get_child(datdefprops, "BASE-TYPE", root_or_cache, ns)
         if base_type is not None:
             type_name = get_element_name(base_type, ns)
-            if type_name[0] == 'u':
+            if type_name[0].lower() in  ('u','b','a'):
                 is_signed = False  # unsigned
             else:
                 is_signed = True  # signed

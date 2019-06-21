@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 
 
 def main():  # type: () -> int
-    canmatrix.log.setup_logger()
+    logger = canmatrix.log.setup_logger()
     from optparse import OptionParser
 
     usage = """
